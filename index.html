@@ -24,6 +24,7 @@
      //<a-sphere color="#F44336 " radius="2" position="-8 2 -8"></a-sphere> 
      //<a-sky set-sky="../picam/cam_pic.php"></a-sky>
      //<a-cursor color="#4CC3D9 " fuse="true" timeout="10"></a-cursor>
+     //<a-sky set-sky="../picam/camd.php"></a-sky>
    },
    remove: function() {
      clearInterval(this.timeout);
@@ -36,16 +37,11 @@
 </script>
 
 <a-scene>
+   
  <a-camera position="0 0 0">
-
  </a-camera>
+ <a-sky src="../picam/camd.php" rotation="0 -130 0"></a-sky> 
 
- 
-
- 
-
- 
-<a-sky set-sky="../picam/camd.php"></a-sky>
 </a-scene>
 
 </body>
