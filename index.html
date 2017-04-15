@@ -23,20 +23,21 @@
      //<a-sky set-sky="http://192.168.0.119/picam/cam_pic.php?time="></a-sky>
      //<a-sphere color="#F44336 " radius="2" position="-8 2 -8"></a-sphere> 
      //<a-sky set-sky="../picam/cam_pic.php"></a-sky>
+     //<a-cursor color="#4CC3D9 " fuse="true" timeout="10"></a-cursor>
    },
    remove: function() {
      clearInterval(this.timeout);
      this.el.removeObject3D(this.object3D);
    },
    updateSky: function() {
-     this.sky.setAttribute( 'src', this.data + "?" + Math.random());
+     this.sky.setAttribute( 'src', this.data + "?timestamp=" + new Date().getTime());
    }
  });
 </script>
 
 <a-scene>
  <a-camera position="0 0 0">
-   <a-cursor color="#4CC3D9 " fuse="true" timeout="10"></a-cursor>
+
  </a-camera>
 
  
@@ -44,7 +45,7 @@
  
 
  
-<a-sky set-sky="../picam/camd.php?ranparam = random()"></a-sky>
+<a-sky set-sky="../picam/camd.php"></a-sky>
 </a-scene>
 
 </body>
