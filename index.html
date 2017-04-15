@@ -18,7 +18,7 @@
  AFRAME.registerComponent('set-sky', {
    schema: {default:''},
    init: function() {
-     this.timeout = setInterval(this.updateSky.bind(this), 100);
+     this.timeout = setInterval(this.updateSky.bind(this), 40);
      this.sky = this.el;
      //<a-sky set-sky="http://192.168.0.119/picam/cam_pic.php?time="></a-sky>
      //<a-sphere color="#F44336 " radius="2" position="-8 2 -8"></a-sphere> 
